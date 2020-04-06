@@ -1,0 +1,83 @@
+#******************* Question - : 2010/2011/2012 :  ********************
+
+
+df2010 = df[df.Period == 2010]
+print("\n\n--------------[ OUTPUT for 2010 ]----------------------\n\n")
+print(df2010[['Location','Period','First Tooltip']])
+
+df2011 = df[df.Period == 2011]
+print("\n\n--------------[ OUTPUT for 2011 ]----------------------\n\n")
+print(df2011[['Location','Period','First Tooltip']])
+
+df2012 = df[df.Period == 2012]
+print("\n\n--------------[ OUTPUT for 2012 ]----------------------\n\n")
+print(df2012[['Location','Period','First Tooltip']])
+
+i = np.arange(len(df2010['Location']))
+print(i)
+
+i1 = np.arange(len(df2011['Location']))
+print(i1)
+
+i2 = np.arange(len(df2012['Location']))
+print(i2)
+
+#--------------- plot for 2010/2011/2012 ----------------------
+
+plt.title('Question - : plot for 2010/2011/2012')
+plt.xlabel("Country sl. no --- >")
+plt.ylabel("Number(%) --- >")
+
+plt.plot(i,df2010['First Tooltip'],
+            marker=7,
+            markersize=10,
+            linestyle='dashed',
+            label="[1] 2010")
+
+plt.plot(i1,df2011['First Tooltip'],
+            marker='*',
+            markersize=10,
+            linestyle='dashed',
+            label="[2] 2011")
+
+plt.plot(i2,df2012['First Tooltip'],
+            marker='+',
+            markersize=10,
+            linestyle='dashed',
+            label="[3] 2012")
+
+plt.legend()
+plt.show()
+
+
+
+--------------[ OUTPUT for 2010 ]----------------------
+
+
+                 Location  Period  First Tooltip
+0                 Albania    2010          23.51
+99   Syrian Arab Republic    2010          33.96
+108  United Arab Emirates    2010          18.06
+
+
+--------------[ OUTPUT for 2011 ]----------------------
+
+
+                Location  Period  First Tooltip
+51               Jamaica    2011           5.87
+61              Maldives    2011          26.49
+76           Philippines    2011           9.31
+103  Trinidad and Tobago    2011           4.49
+
+
+--------------[ OUTPUT for 2012 ]----------------------
+
+
+        Location  Period  First Tooltip
+18    Cabo Verde    2012          21.42
+34          Fiji    2012           9.46
+53        Jordan    2012          10.26
+88  Saudi Arabia    2012          46.08
+[0 1 2]
+[0 1 2 3]
+[0 1 2 3]
