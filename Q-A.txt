@@ -1,0 +1,33 @@
+
+# -*- coding: utf-8 -*-
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import random
+import pandas
+
+
+df = pd.read_csv("C:/Users/Jeet Das/Desktop/Project-36.csv",encoding="utf-8")
+
+print("\n----------------------- output data :---------------------\n")
+print("Project - 36 : Ill-defined causes in cause-of-death registration (%)");
+print("\n------------------------------------------------------------\n")
+
+
+# Question – A : get row and column numbers 
+
+print('---------------------------------------------')
+print("Dimension of the data frame = ",df.shape)
+print('---------------------------------------------')
+
+
+----------------------- output data :---------------------
+
+Project - 36 : Ill-defined causes in cause-of-death registration (%)
+
+------------------------------------------------------------
+
+---------------------------------------------
+Dimension of the data frame =  (114, 4)
+---------------------------------------------
